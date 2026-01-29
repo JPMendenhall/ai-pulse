@@ -75,12 +75,17 @@
         .analysis-section h2 {
             color: #60a5fa;
             font-size: 1.4em;
-            margin-bottom: 15px;
+            margin-top: 30px;
+            margin-bottom: 8px;
             text-transform: uppercase;
             letter-spacing: 1px;
             border-bottom: 2px solid rgba(100, 150, 255, 0.3);
             padding-bottom: 10px;
             text-align: center;
+        }
+        
+        .analysis-section h2:first-child {
+            margin-top: 0;
         }
 
         .analysis-section p {
@@ -94,7 +99,7 @@
             font-weight: 600;
         }
 
-        /* Compact Sources Card */
+        /* Minimal Sources Card */
         .sources-card {
             background: rgba(30, 30, 45, 0.6);
             border-radius: 12px;
@@ -111,49 +116,20 @@
             text-align: center;
         }
 
-        .sources-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 12px;
-        }
-
-        .source-item {
-            background: rgba(20, 20, 35, 0.5);
-            padding: 10px 15px;
-            border-radius: 6px;
-            border-left: 3px solid #3b82f6;
-            transition: all 0.2s ease;
-        }
-
-        .source-item:hover {
-            background: rgba(20, 20, 35, 0.8);
-            border-left-color: #60a5fa;
-        }
-
-        .source-title {
+        .sources-minimal {
+            text-align: center;
+            line-height: 2;
             font-size: 0.9em;
-            color: #e0e0e0;
-            margin-bottom: 4px;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            line-clamp: 2;  /* Add this line */
-            -webkit-box-orient: vertical;
-            overflow: hidden;
         }
 
-        .source-name {
-            font-size: 0.8em;
+        .source-minimal-link {
             color: #60a5fa;
-        }
-
-        .source-link {
-            color: #a78bfa;
             text-decoration: none;
-            font-size: 0.75em;
+            transition: color 0.2s ease;
         }
 
-        .source-link:hover {
-            color: #c4b5fd;
+        .source-minimal-link:hover {
+            color: #a78bfa;
             text-decoration: underline;
         }
 
@@ -183,10 +159,6 @@
             .content {
                 padding: 30px 20px;
             }
-
-            .sources-list {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
@@ -195,157 +167,77 @@
         <div class="header">
             <div class="logo">⚡ AI PULSE</div>
             <div class="date-info">Thursday, January 29, 2026</div>
-            <div class="timestamp">Generated at 06:16 PM ET</div>
+            <div class="timestamp">Generated at 07:34 PM ET</div>
         </div>
 
         <div class="content">
             <!-- Analysis Section (Headlines First) -->
             <div class="analysis-section">
                 <h2>HEADLINE OF THE DAY</h2>
-<p>Google supercharges Chrome with AI capabilities, introducing a proactive browsing experience powered by its Gemini model.</p>
+<p>Google's new AI agent can now browse the web on behalf of users, marking a significant leap in AI-assisted tasks within the Chrome browser.</p>
 <h2>WHAT'S NEW</h2>
 <ul>
-<li>Google has unveiled significant AI enhancements in its Chrome browser, integrating the Gemini model for image generation and a new "Auto Browse" feature that allows the browser to complete tasks autonomously, aiming to streamline user interactions online.</li>
-<li>CompuGroup Medical has launched CGM INDEX.AI, a solution aimed at revolutionizing document automation in healthcare, enhancing the efficiency of document management for healthcare providers and allowing them to focus more on patient care.</li>
-<li>A new satirical project, Ghostly, designed to humorously depict the notion of "ghosting" candidates during hiring processes, showcases the playful side of language models in tech development.</li>
-<li>Joseph Gordon-Levitt is actively supporting an AI transparency bill in Utah, raising awareness about the ethical implications of AI technologies and advocating for greater accountability in the sector.</li>
+<li>Google has announced a new AI assistant integrated into its Chrome browser, designed to browse websites on behalf of users, simplifying the online experience.  </li>
+<li>The ChatPlayground AI platform is offering a lifetime deal for $79, allowing access to over 25 top AI models, making it easier for users to compare different AI tools.  </li>
+<li>A Harvard study highlights the challenges of regulating AI-generated deepfakes, especially regarding their potential misuse in revenge porn cases.  </li>
+<li>In Scotland, CoreWeave is establishing a 500MW AI cloud facility in Lanarkshire, expected to create 800 high-paying jobs in the AI sector, contributing to regional economic growth.</li>
 </ul>
 <h2>BUSINESS MOVES</h2>
 <ul>
-<li>SoftBank is in discussions to potentially invest up to $30 billion in OpenAI, signaling continued interest and confidence in the future of generative AI technologies.</li>
-<li>Meta is shifting its capital expenditures towards AI-driven shopping experiences, with a projected capex of $135 billion, while maintaining its focus on advertising as its primary revenue source.</li>
-<li>Quiet on the business front.</li>
+<li>Handshake, an AI data labeling company, has acquired Cleanlab, which was a target for multiple other firms, indicating a competitive landscape in data services.  </li>
+<li>WhatsApp has announced it will start charging AI chatbots operating in Italy, potentially reshaping how businesses use the platform for customer interaction.  </li>
+<li>Meta is planning to test paid subscriptions across Instagram, Facebook, and WhatsApp, with the promise of enhanced AI tools, although pricing details are still pending.</li>
 </ul>
 <h2>WHY IT MATTERS</h2>
-<p>The integration of AI in Chrome represents a significant shift in how users interact with technology, potentially making web browsing more efficient but also raising questions about privacy and control. CompuGroup Medical's document automation could streamline healthcare processes, leading to better patient outcomes, while the discussions around AI transparency highlight a growing demand for ethical considerations in technology development. As these innovations unfold, they present both opportunities for enhanced productivity and challenges related to user trust and ethical deployment.</p>
+<p>Google's AI browsing feature could dramatically enhance user efficiency, allowing individuals to delegate web tasks to AI, but it raises questions about privacy and the accuracy of information retrieval. Meanwhile, the ChatPlayground deal democratizes access to AI tools, which could empower small businesses and individuals without extensive resources. On a regulatory note, the findings on deepfakes underscore the urgent need for clearer laws to protect individuals from AI's potential misuse, highlighting the dual-edged nature of technological advancement.</p>
 <h2>THE BOTTOM LINE</h2>
-<p>Today's developments underscore a pivotal moment in AI as companies strive to integrate these technologies into everyday tools and workflows. While the potential for increased efficiency and creativity is exciting, the ongoing conversations about ethics and transparency remind us that responsible implementation is just as crucial.</p>
+<p>Today's news showcases a blend of innovative AI developments and emerging business strategies, from enhanced user experiences to crucial regulatory discussions. As AI continues to evolve, the importance of balancing innovation with ethical considerations grows ever more critical.</p>
             </div>
 
-            <!-- Compact Sources Card -->
+            <!-- Minimal Sources List -->
             <div class="sources-card">
                 <h3>📰 Sources (20 articles)</h3>
-                <div class="sources-list">
+                <div class="sources-minimal">
                     
-                    <div class="source-item">
-                        <div class="source-title">Show HN: Ghostly: The Ultimate Platform for Ghosting Candidates (Satire)</div>
-                        <div class="source-name">Wasmer.app</div>
-                        <a href="https://staticfile-25978.wasmer.app/" target="_blank" class="source-link">Read →</a>
-                    </div>
+                        <a href="http://9to5toys.com/2026/01/28/chatplayground-ai-unlimited-lifetime-deal-is-just-79-reg-619/" target="_blank" class="source-minimal-link">9to5Toys</a> • 
                     
-                    <div class="source-item">
-                        <div class="source-title">Google adds AI image generation to Chrome, side panel option for virtual assistant</div>
-                        <div class="source-name">ABC News</div>
-                        <a href="https://abcnews.go.com/Technology/wireStory/google-adds-ai-image-generation-chrome-browser-side-129642949" target="_blank" class="source-link">Read →</a>
-                    </div>
+                        <a href="https://www.approachwithalacrity.com/how-to-turn-sfo-jfk-into-a-beautiful-photo/" target="_blank" class="source-minimal-link">Approachwithalacrity.com</a> • 
                     
-                    <div class="source-item">
-                        <div class="source-title">SoftBank in discussions for up to $30bn additional investment in OpenAI</div>
-                        <div class="source-name">Verdict</div>
-                        <a href="https://www.verdict.co.uk/softbank-additional-investment-openai/" target="_blank" class="source-link">Read →</a>
-                    </div>
+                        <a href="https://www.aljazeera.com/economy/2026/1/28/us-federal-reserve-holds-interest-rates-steady-despite-political-pressure" target="_blank" class="source-minimal-link">Al Jazeera English</a> • 
                     
-                    <div class="source-item">
-                        <div class="source-title">Meta Bets on AI Shopping as Capex Moves Toward $135B</div>
-                        <div class="source-name">Adweek</div>
-                        <a href="https://www.adweek.com/media/meta-bets-on-ai-shopping-as-capex-moves-toward-135b/" target="_blank" class="source-link">Read →</a>
-                    </div>
+                        <a href="https://news.harvard.edu/gazette/story/2026/01/how-ai-deepfakes-have-skirted-revenge-porn-laws/" target="_blank" class="source-minimal-link">Harvard School of Engineering and Applied Sciences</a> • 
                     
-                    <div class="source-item">
-                        <div class="source-title">Google adds AI image generation to Chrome browser, side panel option for virtual assistant</div>
-                        <div class="source-name">Boston Herald</div>
-                        <a href="https://www.bostonherald.com/2026/01/28/google-chrome-ai/" target="_blank" class="source-link">Read →</a>
-                    </div>
+                        <a href="https://techcrunch.com/2026/01/28/whatsapp-will-now-charge-ai-chatbots-to-operate-in-italy/" target="_blank" class="source-minimal-link">TechCrunch</a> • 
                     
-                    <div class="source-item">
-                        <div class="source-title">Joseph Gordon-Levitt Travels to Utah to Support State’s AI Transparency Bill</div>
-                        <div class="source-name">TheWrap</div>
-                        <a href="https://www.thewrap.com/industry-news/tech/joseph-gordon-levitt-utah-ai-transparency-bill/" target="_blank" class="source-link">Read →</a>
-                    </div>
+                        <a href="https://financialpost.com/technology/google-ai-agent-can-browse-on-users-behalf" target="_blank" class="source-minimal-link">Financial Post</a> • 
                     
-                    <div class="source-item">
-                        <div class="source-title">Show HN: Ralphex – Ralph-inspired loop extended with plan creation and reviews</div>
-                        <div class="source-name">Umputun.dev</div>
-                        <a href="https://ralphex.umputun.dev/" target="_blank" class="source-link">Read →</a>
-                    </div>
+                        <a href="https://www.livemint.com/companies/amazon-still-doesn-t-understand-brick-and-mortar-retail-11769627961463.html" target="_blank" class="source-minimal-link">Livemint</a> • 
                     
-                    <div class="source-item">
-                        <div class="source-title">Google Just Turned Chrome Into Your Personal AI Assistant With Massive Gemini Update</div>
-                        <div class="source-name">Android Headlines</div>
-                        <a href="https://www.androidheadlines.com/2026/01/google-just-turned-chrome-into-your-personal-ai-assistant-with-massive-gemini-update.html" target="_blank" class="source-link">Read →</a>
-                    </div>
+                        <a href="https://statetimes.in/deepfakes-significant-threat-to-democracy-president/" target="_blank" class="source-minimal-link">Statetimes.in</a> • 
                     
-                    <div class="source-item">
-                        <div class="source-title">Chrome takes on AI browsers with tighter Gemini integration, agentic features for autonomous tasks | TechCrunch</div>
-                        <div class="source-name">TechCrunch</div>
-                        <a href="https://techcrunch.com/2026/01/28/chrome-takes-on-ai-browsers-with-tighter-gemini-integration-agentic-features-for-autonomous-tasks/" target="_blank" class="source-link">Read →</a>
-                    </div>
+                        <a href="https://marketplace.visualstudio.com/items?itemName=BlackEagleLabsAI.voyagerai" target="_blank" class="source-minimal-link">Visualstudio.com</a> • 
                     
-                    <div class="source-item">
-                        <div class="source-title">Your Google Chrome browser just got a useful autopilot feature - here's how it works</div>
-                        <div class="source-name">ZDNet</div>
-                        <a href="https://www.zdnet.com/home-and-office/work-life/google-chrome-auto-browse/" target="_blank" class="source-link">Read →</a>
-                    </div>
+                        <a href="https://bradenkelley.com/2026/01/win-your-way-to-an-ai-job/" target="_blank" class="source-minimal-link">Bradenkelley.com</a> • 
                     
-                    <div class="source-item">
-                        <div class="source-title">Google Unleashes AI in Chrome with ‘Auto Browse’</div>
-                        <div class="source-name">Gizmodo.com</div>
-                        <a href="https://gizmodo.com/google-unleashes-ai-in-chrome-with-auto-browse-2000714835" target="_blank" class="source-link">Read →</a>
-                    </div>
+                        <a href="http://futurism.com/artificial-intelligence/google-ai-knows-about-you-uncomfortable" target="_blank" class="source-minimal-link">Futurism</a> • 
                     
-                    <div class="source-item">
-                        <div class="source-title">Google brings more Gemini AI features to Chrome browser</div>
-                        <div class="source-name">CNBC</div>
-                        <a href="https://www.cnbc.com/2026/01/28/google-brings-more-gemini-ai-features-to-chrome-browser-.html" target="_blank" class="source-link">Read →</a>
-                    </div>
+                        <a href="https://www.forrester.com/blogs/premium-meta-a-small-yes-a-loud-no/" target="_blank" class="source-minimal-link">Forrester.com</a> • 
                     
-                    <div class="source-item">
-                        <div class="source-title">Google just supercharged Chrome with Gemini, and it makes me a little uneasy</div>
-                        <div class="source-name">Android Central</div>
-                        <a href="https://www.androidcentral.com/apps-software/google-just-supercharged-chrome-with-gemini-and-it-makes-me-a-little-uneasy" target="_blank" class="source-link">Read →</a>
-                    </div>
+                        <a href="https://techcrunch.com/2026/01/28/ai-data-labeler-handshake-buys-cleanlab-an-acquisition-target-of-multiple-others/" target="_blank" class="source-minimal-link">TechCrunch</a> • 
                     
-                    <div class="source-item">
-                        <div class="source-title">Google’s New Chrome ‘Auto Browse’ Agent Attempts to Roam the Web Without You</div>
-                        <div class="source-name">Wired</div>
-                        <a href="https://www.wired.com/story/google-chrome-auto-browse/" target="_blank" class="source-link">Read →</a>
-                    </div>
+                        <a href="https://www.theatlantic.com/technology/2026/01/anthropic-is-at-war-with-itself/684892/" target="_blank" class="source-minimal-link">The Atlantic</a> • 
                     
-                    <div class="source-item">
-                        <div class="source-title">Ready for Gemini to Take Over? Google Previews 'Auto Browse' Mode for Chrome</div>
-                        <div class="source-name">PCMag.com</div>
-                        <a href="https://uk.pcmag.com/ai/162843/ready-for-gemini-to-take-over-google-previews-auto-browse-mode-for-chrome" target="_blank" class="source-link">Read →</a>
-                    </div>
+                        <a href="https://www.computerweekly.com/news/366637748/Scotland-gets-AI-growth-zone-boost-in-Lanarkshire" target="_blank" class="source-minimal-link">ComputerWeekly.com</a> • 
                     
-                    <div class="source-item">
-                        <div class="source-title">Chrome gets its biggest upgrade in years — the new Gemini side panel puts AI agents, multitasking, and Nano Banana inside the browser</div>
-                        <div class="source-name">TechRadar</div>
-                        <a href="https://www.techradar.com/ai-platforms-assistants/chrome-gets-its-biggest-upgrade-in-years-the-new-gemini-side-panel-puts-ai-agents-multitasking-and-nano-banana-inside-the-browser" target="_blank" class="source-link">Read →</a>
-                    </div>
+                        <a href="http://deadline.com/2026/01/slate-contract-wga-east-ai-protections-1236700165/" target="_blank" class="source-minimal-link">Deadline</a> • 
                     
-                    <div class="source-item">
-                        <div class="source-title">Ready for Gemini to Take Over? Google Previews 'Auto Browse' Mode for Chrome</div>
-                        <div class="source-name">PCMag.com</div>
-                        <a href="https://me.pcmag.com/en/ai/34969/ready-for-gemini-to-take-over-google-previews-auto-browse-mode-for-chrome" target="_blank" class="source-link">Read →</a>
-                    </div>
+                        <a href="https://www.livescience.com/technology/artificial-intelligence/giving-ai-the-ability-to-monitor-its-own-thought-process-could-help-it-think-like-humans" target="_blank" class="source-minimal-link">Live Science</a> • 
                     
-                    <div class="source-item">
-                        <div class="source-title">Google Chrome wants to surf the web for you</div>
-                        <div class="source-name">PCWorld</div>
-                        <a href="https://www.pcworld.com/article/3044945/google-chrome-wants-to-surf-the-web-for-you.html" target="_blank" class="source-link">Read →</a>
-                    </div>
+                        <a href="https://www.globenewswire.com/news-release/2026/01/28/3227979/0/en/AI-Native-Startup-Playbook-Launch-Silicon-Valley-2026.html" target="_blank" class="source-minimal-link">GlobeNewswire</a> • 
                     
-                    <div class="source-item">
-                        <div class="source-title">CompuGroup Medical Unveils CGM INDEX.AI: Revolutionizing Document Automation in Healthcare</div>
-                        <div class="source-name">GlobeNewswire</div>
-                        <a href="https://www.globenewswire.com/news-release/2026/01/28/3227949/0/en/CompuGroup-Medical-Unveils-CGM-INDEX-AI-Revolutionizing-Document-Automation-in-Healthcare.html" target="_blank" class="source-link">Read →</a>
-                    </div>
+                        <a href="http://www.vulture.com/article/glambot-cole-walliser-apology-emails.html" target="_blank" class="source-minimal-link">Vulture</a> • 
                     
-                    <div class="source-item">
-                        <div class="source-title">How Tipico democratized data transformations using Amazon Managed Workflows for Apache Airflow and AWS Batch</div>
-                        <div class="source-name">Amazon.com</div>
-                        <a href="https://aws.amazon.com/blogs/big-data/how-tipico-democratized-data-transformations-using-amazon-managed-workflows-for-apache-airflow-and-aws-batch/" target="_blank" class="source-link">Read →</a>
-                    </div>
+                        <a href="https://news.ycombinator.com/item?id=46799839" target="_blank" class="source-minimal-link">Hacker News</a>
                     
                 </div>
             </div>
