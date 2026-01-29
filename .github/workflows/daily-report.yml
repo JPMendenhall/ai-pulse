@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install openai requests python-dotenv jinja2 markdown
+          pip install openai requests python-dotenv jinja2 markdown pytz
       
       - name: Generate daily report
         env:
