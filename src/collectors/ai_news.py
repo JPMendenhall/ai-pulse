@@ -84,8 +84,8 @@ def get_ai_news():
         
         for article in articles:
             url = article.get('url', '').lower()
-            title = article.get('title', '').lower()
-            description = article.get('description', '').lower()
+            title = (article.get('title') or '').lower()
+            description = (article.get('description') or '').lower()
             
             # Skip if from excluded source
             if any(source in url for source in excluded_sources):
