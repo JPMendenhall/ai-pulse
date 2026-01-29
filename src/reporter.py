@@ -4,10 +4,12 @@ from jinja2 import Template
 import markdown
 import re
 
+# Get the project root directory (parent of src/)
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 def format_analysis_for_html(analysis_text):
     """Convert markdown-style analysis to HTML with proper section headers"""
     # Convert **SECTION TITLE** to <h2>SECTION TITLE</h2>
-    # This regex finds lines that are just bold text (section headers)
     analysis_text = re.sub(
         r'\*\*(.*?)\*\*\s*$',
         r'<h2>\1</h2>',
@@ -22,8 +24,9 @@ def format_analysis_for_html(analysis_text):
 def generate_daily_html_report(news_items, analysis):
     """Generate daily HTML report"""
     
-    # Read template
-    template_path = os.path.join('templates', 'daily_report.html')
+    # Use absolute paths from project root
+    template_path = os.path.join(PROJECT_ROOT, 'templates', 'daily_report.html')
+    
     with open(template_path, 'r', encoding='utf-8') as f:
         template_content = f.read()
     
@@ -49,10 +52,11 @@ def generate_daily_html_report(news_items, analysis):
     
     # Save to reports/daily/ with date format
     filename = timestamp.strftime('report_%Y%m%d.html')
-    filepath = os.path.join('reports', 'daily', filename)
+    reports_dir = os.path.join(PROJECT_ROOT, 'reports', 'daily')
+    filepath = os.path.join(reports_dir, filename)
     
     # Ensure directory exists
-    os.makedirs(os.path.join('reports', 'daily'), exist_ok=True)
+    os.makedirs(reports_dir, exist_ok=True)
     
     with open(filepath, 'w', encoding='utf-8') as f:
         f.write(html)
