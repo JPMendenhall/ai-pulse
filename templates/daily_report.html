@@ -75,12 +75,17 @@
         .analysis-section h2 {
             color: #60a5fa;
             font-size: 1.4em;
-            margin-bottom: 15px;
+            margin-top: 30px;
+            margin-bottom: 8px;
             text-transform: uppercase;
             letter-spacing: 1px;
             border-bottom: 2px solid rgba(100, 150, 255, 0.3);
             padding-bottom: 10px;
             text-align: center;
+        }
+        
+        .analysis-section h2:first-child {
+            margin-top: 0;
         }
 
         .analysis-section p {
@@ -94,8 +99,7 @@
             font-weight: 600;
         }
 
-        /* Compact Sources Card */
-/* Compact Sources Card */
+        /* Minimal Sources Card */
         .sources-card {
             background: rgba(30, 30, 45, 0.6);
             border-radius: 12px;
@@ -112,33 +116,21 @@
             text-align: center;
         }
 
-        .sources-compact {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            justify-content: center;
+        .sources-minimal {
+            text-align: center;
+            line-height: 2;
+            font-size: 0.9em;
         }
 
-        .source-compact-item {
-            background: rgba(20, 20, 35, 0.5);
-            border-radius: 6px;
-            transition: all 0.2s ease;
-        }
-
-        .source-compact-item:hover {
-            background: rgba(20, 20, 35, 0.8);
-        }
-
-        .source-compact-link {
+        .source-minimal-link {
             color: #60a5fa;
             text-decoration: none;
-            font-size: 0.85em;
-            padding: 6px 12px;
-            display: block;
+            transition: color 0.2s ease;
         }
 
-        .source-compact-link:hover {
+        .source-minimal-link:hover {
             color: #a78bfa;
+            text-decoration: underline;
         }
 
         .footer {
@@ -167,10 +159,6 @@
             .content {
                 padding: 30px 20px;
             }
-
-            .sources-list {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
@@ -188,16 +176,12 @@
                 {{ analysis_html|safe }}
             </div>
 
-            <!-- Compact Sources Card -->
+            <!-- Minimal Sources List -->
             <div class="sources-card">
                 <h3>📰 Sources ({{ news_items|length }} articles)</h3>
-                <div class="sources-compact">
+                <div class="sources-minimal">
                     {% for item in news_items %}
-                    <div class="source-compact-item">
-                        <a href="{{ item.url }}" target="_blank" class="source-compact-link">
-                            {{ item.source }}
-                        </a>
-                    </div>
+                        <a href="{{ item.url }}" target="_blank" class="source-minimal-link">{{ item.source }}</a>{% if not loop.last %} • {% endif %}
                     {% endfor %}
                 </div>
             </div>
