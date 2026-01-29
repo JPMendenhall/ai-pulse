@@ -29,9 +29,8 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
         run: |
-          cd src
-          python daily.py
-      
+          python src/daily.py
+          
       - name: Commit and push report
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
