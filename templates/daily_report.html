@@ -95,6 +95,7 @@
         }
 
         /* Compact Sources Card */
+/* Compact Sources Card */
         .sources-card {
             background: rgba(30, 30, 45, 0.6);
             border-radius: 12px;
@@ -111,50 +112,33 @@
             text-align: center;
         }
 
-        .sources-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 12px;
+        .sources-compact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
         }
 
-        .source-item {
+        .source-compact-item {
             background: rgba(20, 20, 35, 0.5);
-            padding: 10px 15px;
             border-radius: 6px;
-            border-left: 3px solid #3b82f6;
             transition: all 0.2s ease;
         }
 
-        .source-item:hover {
+        .source-compact-item:hover {
             background: rgba(20, 20, 35, 0.8);
-            border-left-color: #60a5fa;
         }
 
-        .source-title {
-            font-size: 0.9em;
-            color: #e0e0e0;
-            margin-bottom: 4px;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            line-clamp: 2;  /* Add this line */
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .source-name {
-            font-size: 0.8em;
+        .source-compact-link {
             color: #60a5fa;
-        }
-
-        .source-link {
-            color: #a78bfa;
             text-decoration: none;
-            font-size: 0.75em;
+            font-size: 0.85em;
+            padding: 6px 12px;
+            display: block;
         }
 
-        .source-link:hover {
-            color: #c4b5fd;
-            text-decoration: underline;
+        .source-compact-link:hover {
+            color: #a78bfa;
         }
 
         .footer {
@@ -207,12 +191,12 @@
             <!-- Compact Sources Card -->
             <div class="sources-card">
                 <h3>📰 Sources ({{ news_items|length }} articles)</h3>
-                <div class="sources-list">
+                <div class="sources-compact">
                     {% for item in news_items %}
-                    <div class="source-item">
-                        <div class="source-title">{{ item.title }}</div>
-                        <div class="source-name">{{ item.source }}</div>
-                        <a href="{{ item.url }}" target="_blank" class="source-link">Read →</a>
+                    <div class="source-compact-item">
+                        <a href="{{ item.url }}" target="_blank" class="source-compact-link">
+                            {{ item.source }}
+                        </a>
                     </div>
                     {% endfor %}
                 </div>
