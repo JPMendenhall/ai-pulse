@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Pulse - January 29, 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(20, 20, 30, 0.9);
+            border-radius: 16px;
+            border: 1px solid rgba(100, 150, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            padding: 40px 30px;
+            text-align: center;
+            border-bottom: 2px solid rgba(100, 150, 255, 0.3);
+        }
+
+        .logo {
+            font-size: 2.5em;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .date-info {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+
+        .timestamp {
+            font-size: 0.9em;
+            opacity: 0.7;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .analysis-section {
+            background: rgba(30, 30, 45, 0.6);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(100, 150, 255, 0.1);
+        }
+
+        .analysis-section h2 {
+            color: #60a5fa;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid rgba(100, 150, 255, 0.3);
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .analysis-section p {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #d0d0d0;
+        }
+
+        .analysis-section strong {
+            color: #60a5fa;
+            font-weight: 600;
+        }
+
+        /* Compact Sources Card */
+        .sources-card {
+            background: rgba(30, 30, 45, 0.6);
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid rgba(100, 150, 255, 0.1);
+        }
+
+        .sources-card h3 {
+            color: #a78bfa;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .sources-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 12px;
+        }
+
+        .source-item {
+            background: rgba(20, 20, 35, 0.5);
+            padding: 10px 15px;
+            border-radius: 6px;
+            border-left: 3px solid #3b82f6;
+            transition: all 0.2s ease;
+        }
+
+        .source-item:hover {
+            background: rgba(20, 20, 35, 0.8);
+            border-left-color: #60a5fa;
+        }
+
+        .source-title {
+            font-size: 0.9em;
+            color: #e0e0e0;
+            margin-bottom: 4px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;  /* Add this line */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .source-name {
+            font-size: 0.8em;
+            color: #60a5fa;
+        }
+
+        .source-link {
+            color: #a78bfa;
+            text-decoration: none;
+            font-size: 0.75em;
+        }
+
+        .source-link:hover {
+            color: #c4b5fd;
+            text-decoration: underline;
+        }
+
+        .footer {
+            background: rgba(15, 15, 25, 0.8);
+            padding: 20px 30px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #808080;
+            border-top: 1px solid rgba(100, 150, 255, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+                border-radius: 0;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+
+            .logo {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .sources-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">⚡ AI PULSE</div>
+            <div class="date-info">Thursday, January 29, 2026</div>
+            <div class="timestamp">Generated at 12:31 PM ET</div>
+        </div>
+
+        <div class="content">
+            <!-- Analysis Section (Headlines First) -->
+            <div class="analysis-section">
+                <h2>HEADLINE OF THE DAY</h2>
+<p>OpenAI launches Prism, an AI workspace for scientists, powered by GPT-5.2, aiming to revolutionize scientific research.</p>
+<h2>WHAT'S NEW</h2>
+<ul>
+<li>Microsoft has unveiled <strong>.NET AI Essentials</strong>, a unified API that simplifies building intelligent applications with any LLM provider, enhancing developer flexibility with integrated middleware and telemetry.  </li>
+<li>OpenAI introduced <strong>Prism</strong>, a workspace designed specifically for scientists, which leverages advanced AI capabilities to streamline research tasks.  </li>
+<li>Figma has integrated <strong>Anthropic’s Claude</strong> into FigJam, allowing users to generate editable diagrams within their collaborative platforms, enhancing productivity.  </li>
+<li>AI has successfully discovered hidden cosmic phenomena in Hubble's vast image archive, completing a task that would have taken astronomers years in just two and a half days.</li>
+</ul>
+<h2>BUSINESS MOVES</h2>
+<ul>
+<li>Meta is set to report its fourth-quarter earnings soon, and investors are keenly awaiting updates on its revamped AI strategy, which could significantly impact its performance.  </li>
+<li>Recent layoffs at major companies, including Amazon and UPS, have raised concerns about a "no-hire, no-fire" standstill in the job market, reflecting ongoing economic uncertainty.  </li>
+<li>Forrester predicts that global technology spending will grow by a record 7.8% in 2026, driven by generative AI investments, signaling robust future growth despite current economic challenges.</li>
+</ul>
+<h2>WHY IT MATTERS</h2>
+<p>The launch of Microsoft's <strong>.NET AI Essentials</strong> is a game-changer for developers, allowing for greater adaptability and integration of AI into various applications without being tied to a single AI provider. OpenAI's <strong>Prism</strong> could accelerate scientific discovery by making complex research tasks more manageable, although concerns about the over-reliance on AI remain. Meanwhile, the integration of Claude into FigJam signifies a shift towards more seamless collaboration in creative workflows, but users must remain cautious about the potential risks of AI tools in terms of data privacy and security.</p>
+<h2>THE BOTTOM LINE</h2>
+<p>Today's developments underscore a significant shift towards more integrated and specialized AI solutions across various sectors, from software development to scientific research. As companies adapt to these innovations, the balance between leveraging AI's potential and addressing its inherent risks will be crucial for success in an ever-evolving technological landscape.</p>
+            </div>
+
+            <!-- Compact Sources Card -->
+            <div class="sources-card">
+                <h3>📰 Sources (20 articles)</h3>
+                <div class="sources-list">
+                    
+                    <div class="source-item">
+                        <div class="source-title">.NET AI Essentials – The Core Building Blocks Explained</div>
+                        <div class="source-name">Microsoft.com</div>
+                        <a href="https://devblogs.microsoft.com/dotnet/dotnet-ai-essentials-the-core-building-blocks-explained/" target="_blank" class="source-link">Read →</a>
+                    </div>
+                    
+                    <div class="source-item">
+                        <div class="source-title">How Drones Are Changing The Business Of Aircraft Carriers</div>
+                        <div class="source-name">Forbes</div>
+                        <a href="https://www.forbes.com/sites/zitaballingerfletcher/2026/01/28/how-drones-are-changing-the-business-of-aircraft-carriers/" target="_blank" class="source-link">Read →</a>
+                    </div>
+                    
+                    <div class="source-item">
+                        <div class="source-title">Layoffs are piling up, heightening worker anxiety. Here are some of the biggest job cuts recently</div>
+                        <div class="source-name">Associated Press</div>
+                        <a href="https://apnews.com/article/amazon-ups-layoffs-economy-washington-71bfde72b358fddb9a22c15aa13fe848" target="_blank" class="source-link">Read →</a>
+                    </div>
+                    
+                    <div class="source-item">
+                        <div class="source-title">Show HN: Promptguard JSON Schema Tests for LLM Outputs in GitHub Actions</div>
+                        <div class="source-name">Github.io</div>
+                        <a href="https://eternallypanicked.github.io/" target="_blank" class="source-link">Read →</a>
+                    </div>
+                    
+                    <div class="source-item">
+                        <div class="source-title">Global Technology Spending Will Grow a Record 7.8% In 2026 To Reach $5.6 Trillion</div>
+                        <div class="source-name">Forrester.com</div>
+                        <a href="https://www.forrester.com/blogs/global-technology-spending-will-grow-a-record-7-8-in-2026-to-reach-5-6-trillion/" target="_blank" class="source-link">Read →</a>
+                    </div>
+                    
+                    <div class="source-item">
+                        <div class="source-title">US Technology Spending Will Grow a Record 8.3% In 2026 To Reach $2.9 Trillion</div>
+                        <div class="source-name">Forrester.com</div>
+                        <a href="https://www.forrester.com/blogs/us-technology-spending-will-grow-a-record-8-3-in-2026-to-reach-2-9-trillion/" target="_blank" class="source-link">Read →</a>
+                    </div>
+                    
+                    <div class="source-item">
+                        <div class="source-title">GenAI and Cloud Push IT Services Toward $2.1 Trillion by 2029</div>
+                        <div class="source-name">Forrester.com</div>
+                        <a href="https://www.forrester.com/blogs/genai-and-cloud-push-it-services-toward-2-1-trillion-by-2029/" target="_blank" class="source-link">Read →</a>
+                    </div>
+                    
+                    <div class="source-item">
+                        <div class="source-title">Anthropic CEO Warns That the AI Tech He’s Creating Could Ravage Human Civilization</div>
+                        <div class="source-name">Futurism</div>
+                        <a href="http://futurism.com/artificial-intelligence/anthropic-ceo-warns-ai-ravage-human-civilization" target="_blank" class="source-link">Read →</a>
+                    </div>
+                    
+                    <div class="source-item">
+                        <div class="source-title">When Monetary Policy Is Asked to Do Too Much</div>
+                        <div class="source-name">Upenn.edu</div>
+                        <a href="https://knowledge.wharton.upenn.edu/article/when-monetary-policy-is-asked-to-do-too-much/" target="_blank" class="source-link">Read →</a>
+                    </div>
+                    
+                    <div class="source-item">
+                        <div class="source-title">Users flock to open source Moltbot for always-on AI, despite major risks - Ars Technica</div>
+                        <div class="source-name">Slashdot.org</div>
+                        <a href="https://slashdot.org/firehose.pl?op=view&amp;id=180679108" target="_blank" class="source-link">Read →</a>
+                    </div>
+                    
+                    <div class="source-item">
+                        <div class="source-title">AI Unearths Hidden Cosmic Oddities Lurking in Hubble’s Vast Archive</div>
+                        <div class="source-name">ScienceBlog.com</div>
+                        <a href="https://scienceblog.com/ai-unearths-hidden-cosmic-oddities-lurking-in-hubbles-vast-archive/" target="_blank" class="source-link">Read →</a>
+                    </div>
+                    
+                    <div class="source-item">
+                        <div class="source-title">OpenAI’s Prism Takes on Claude AI for Scientists & Coders</div>
+                        <div class="source-name">Android Headlines</div>
+                        <a href="https://www.androidheadlines.com/2026/01/openai-prism-vs-claude-code-science-coding.html" target="_blank" class="source-link">Read →</a>
+                    </div>
+                    
+                    <div class="source-item">
+                        <div class="source-title">Figma Integrates Anthropic’s Claude to Generate Diagrams Inside FigJam</div>
+                        <div class="source-name">CMSWire</div>
+                        <a href="https://www.cmswire.com/digital-experience/figma-integrates-anthropics-claude-to-generate-diagrams-inside-figjam/" target="_blank" class="source-link">Read →</a>
+                    </div>
+                    
+                    <div class="source-item">
+                        <div class="source-title">With Apple’s new Creator Studio Pro, AI is a tool to aid creation, not replace it</div>
+                        <div class="source-name">TechCrunch</div>
+                        <a href="https://techcrunch.com/2026/01/28/with-apples-new-creator-studio-pro-ai-is-a-tool-to-aid-creation-not-replace-it/" target="_blank" class="source-link">Read →</a>
+                    </div>
+                    
+                    <div class="source-item">
+                        <div class="source-title">Presentation: Foundation Models for Ranking: Challenges, Successes, and Lessons Learned</div>
+                        <div class="source-name">InfoQ.com</div>
+                        <a href="https://www.infoq.com/presentations/foundation-models-ranking/" target="_blank" class="source-link">Read →</a>
+                    </div>
+                    
+                    <div class="source-item">
+                        <div class="source-title">Presentation: Foundation Models for Ranking: Challenges, Successes, and Lessons Learned</div>
+                        <div class="source-name">InfoQ.com</div>
+                        <a href="https://www.infoq.com/presentations/foundation-models-ranking/" target="_blank" class="source-link">Read →</a>
+                    </div>
+                    
+                    <div class="source-item">
+                        <div class="source-title">TikTok’s new privacy policy is raising alarms: Here’s how to delete your account right now</div>
+                        <div class="source-name">Android Authority</div>
+                        <a href="https://www.androidauthority.com/how-to-delete-tiktok-account-3635952/" target="_blank" class="source-link">Read →</a>
+                    </div>
+                    
+                    <div class="source-item">
+                        <div class="source-title">AI Is Worse At Psychology Than 1-Year Old Infant</div>
+                        <div class="source-name">Spring.org.uk</div>
+                        <a href="https://www.spring.org.uk/2023/04/ai-psychological.php" target="_blank" class="source-link">Read →</a>
+                    </div>
+                    
+                    <div class="source-item">
+                        <div class="source-title">The Health Risks Of Winter Storms</div>
+                        <div class="source-name">Forbes</div>
+                        <a href="https://www.forbes.com/sites/innovationrx/2026/01/28/the-health-risks-of-winter-storms/" target="_blank" class="source-link">Read →</a>
+                    </div>
+                    
+                    <div class="source-item">
+                        <div class="source-title">Meta set to report earnings: Update on revamped AI strategy is key to fourth quarter</div>
+                        <div class="source-name">CNBC</div>
+                        <a href="https://www.cnbc.com/2026/01/28/meta-q4-earnings-report-2025.html" target="_blank" class="source-link">Read →</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            AI Pulse • Daily AI & Technology Intelligence<br>
+            Powered by NewsAPI & OpenAI GPT-4o-mini
+        </div>
+    </div>
+</body>
+</html>
