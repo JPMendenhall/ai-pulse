@@ -1,8 +1,9 @@
 import os
-from datetime import datetime
+from datetime import datetime, timezone
 from jinja2 import Template
 import markdown
 import re
+import pytz
 
 # Get the project root directory (parent of src/)
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -32,11 +33,17 @@ def generate_daily_html_report(news_items, analysis):
     
     template = Template(template_content)
     
-    # Format timestamp
-    timestamp = datetime.now()
-    date_str = timestamp.strftime('%B %d, %Y')
-    time_str = timestamp.strftime('%I:%M %p ET')
-    day_of_week = timestamp.strftime('%A')
+    # Format timestamp - convert UTC to ET
+    timestamp = datetime.now(timezone.utc)  # Get current time in UTC
+    
+    # Convert to Eastern Time
+    eastern = pytz.timezone('US/Eastern')
+    timestamp_et = timestamp.astimezone(eastern)
+    
+    # Format strings
+    date_str = timestamp_et.strftime('%B %d, %Y')
+    time_str = timestamp_et.strftime('%I:%M %p ET')
+    day_of_week = timestamp_et.strftime('%A')
     
     # Convert analysis to HTML
     analysis_html = format_analysis_for_html(analysis)
@@ -50,8 +57,8 @@ def generate_daily_html_report(news_items, analysis):
         analysis_html=analysis_html
     )
     
-    # Save to reports/daily/ with date format
-    filename = timestamp.strftime('report_%Y%m%d.html')
+    # Save to reports/daily/ with date format (use ET date for filename)
+    filename = timestamp_et.strftime('report_%Y%m%d.html')
     reports_dir = os.path.join(PROJECT_ROOT, 'reports', 'daily')
     filepath = os.path.join(reports_dir, filename)
     
