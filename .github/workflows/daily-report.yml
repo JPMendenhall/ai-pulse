@@ -41,3 +41,31 @@ jobs:
           git add reports/daily/*.html
           git diff --staged --quiet || git commit -m "Daily AI Pulse Report - $(date +'%Y-%m-%d')"
           git push
+      
+      - name: Generate daily report
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
+        run: |
+          python src/daily.py
+          echo "=== Files generated ==="
+          ls -la reports/daily/
+          echo "=== Content check ==="
+          if [ -f reports/daily/report_$(date +'%Y%m%d').html ]; then
+            echo "Report file EXISTS for today"
+            wc -l reports/daily/report_$(date +'%Y%m%d').html
+          else
+            echo "Report file MISSING for today"
+          fi
+      
+      - name: Commit and push report
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          echo "=== Git status before add ==="
+          git status
+          git add reports/daily/*.html
+          echo "=== Git status after add ==="
+          git status
+          git diff --staged --quiet || git commit -m "Daily AI Pulse Report - $(date +'%Y-%m-%d')"
+          git push
